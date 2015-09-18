@@ -1,4 +1,4 @@
-# playbook-skeleton
+# skeleton
 
 Skeleton - A script that builds out the directory structure and commonalities of our ansible playbooks.
 
@@ -12,6 +12,14 @@ First Iteration:
   - Populates each {required system} directory with 'playbook.yml' and 'dependencies.yml'
 
 All files are created blank, but will be updated (in the next iteration) to suite current ansible requirements for baser functionality.
+
+Second Iteration:
+- Commandline functionality detailed above still persists and can be invoked by targetting 'skeleton.rb' with the appropriate options.
+- Newly added, is 'bone_marrow.rb' (working title), which allows you to populate the inards of the playbook file structure.
+  - At present these inards are static and must be modified in marrow.rb to work.
+- Next version bump will include the 'required_system' (ex application, management) functionality. At present only the common level exists. As well as correctly generate the host files for next/dev/stage/prod.
+
+Eventually bone_marrow will run with a command line interface similar to the first iteration and later with a checklist UI populated with TD ansible roles.
 
 License
 -------
