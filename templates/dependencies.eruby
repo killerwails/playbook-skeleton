@@ -1,0 +1,4 @@
+---
+<% $ansible_roles.each do |ansible_role| %>
+- src: telusdigital.<%= ansible_role %>
+<% end %>

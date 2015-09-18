@@ -1,0 +1,11 @@
+---
+- connection: local
+  hosts: localhost
+  roles:
+    - role: telusdigital.aws-infrastructure
+  vars:
+    domain: teluswebteam.com
+    required_systems:
+<% $required_systems.each do |required_system| %>
+      - <%= required_system %>
+<% end %>
