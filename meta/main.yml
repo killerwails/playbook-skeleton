@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Aaron Pederson
-  description: Skeleton - An script that builds out the directory structure and commonalities of our ansible playbooks.
+  description: Skeleton - A script that builds out the directory structure and commonalities of our ansible playbooks.
   license: MIT
   platforms:
     - name: Ubuntu
