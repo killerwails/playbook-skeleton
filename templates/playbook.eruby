@@ -2,7 +2,5 @@
 - connection: local
   hosts: localhost
   roles:
-<% $ansible_roles.each do |ansible_role| %>
-    - role: telusdigital.<%= ansible_role %>
-<% end %>
+    - role: telusdigital.{{ ansible_role }}
   vars:
