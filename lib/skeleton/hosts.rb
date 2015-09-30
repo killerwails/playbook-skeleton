@@ -8,6 +8,7 @@ module Skeleton
     Dir.mkdir "playbook-#{$project_name}/hosts" unless Dir.exist? "playbook-#{$project_name}/hosts"
     environments.each do |environment|
       context = {
+        required_systems: $required_systems,
         environment: environment
       }
       File.write "playbook-#{$project_name}/hosts/#{environment}", template_file.evaluate(context)
