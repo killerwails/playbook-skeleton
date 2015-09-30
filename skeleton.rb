@@ -1,22 +1,19 @@
 #!/usr/bin/env ruby
 
-project_name = ARGV.shift
-files = %w(dependencies playbook)
-environments = %w(next development staging production)
+require 'erubis'
 
-system "mkdir -p playbook-#{project_name}/hosts"
-system "touch playbook-#{project_name}/vault.yml"
-system "touch playbook-#{project_name}/dependencies.yml"
-system "touch playbook-#{project_name}/playbook.yml"
-system "touch playbook-#{project_name}/infrastructure.yml"
+require_relative 'lib/skeleton'
 
-environments.each { |environment| system "touch playbook-#{project_name}/hosts/#{environment}" }
+$project_name = ARGV.first
+$required_systems = ARGV.last (ARGV.length - 1)
+$environment = %w(next development staging production)
 
-required_systems = ['.', ARGV[1,-1]].flatten
-
-ARGV.each do |required_system|
-  system "mkdir -p playbook-#{project_name}/#{required_system}" unless required_system == '.'
-  files.each do |file|
-    system "touch playbook-#{project_name}/#{required_system}/#{file}.yml"
-  end
-end
+Skeleton.create_playbook_directory
+Skeleton.hosts
+Skeleton.create_required_system_directories
+Skeleton.common_playbook
+Skeleton.required_system_playbook
+Skeleton.infrastructure
+Skeleton.dependencies
+Skeleton.required_system_dependencies
+Skeleton.vault
