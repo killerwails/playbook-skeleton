@@ -1,5 +1,6 @@
 require_relative 'skeleton/project'
+require_relative 'skeleton/hosts'
 require_relative 'skeleton/playbook'
 require_relative 'skeleton/dependencies'
 require_relative 'skeleton/infrastructure'
-require_relative 'skeleton/hosts'
+require_relative 'skeleton/vault'
