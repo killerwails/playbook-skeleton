@@ -1,0 +1,17 @@
+---
+slack_token:
+database_password:
+
+riofs_access_key_id:
+riofs_secret_access_key:
+
+fluentd_elasticsearch_user:
+fluentd_elasticsearch_password:
+
+deployment_public_key:
+
+deployment_private_key: |
+
+ssl_certificate_public_contents: |
+
+ssl_certificate_private_contents: |
