@@ -18,8 +18,13 @@ Second Iteration:
 - Newly added, is 'bone_marrow.rb' (working title), which allows you to populate the inards of the playbook file structure.
   - At present these inards are static and must be modified in marrow.rb to work.
 - Next version bump will include the 'required_system' (ex application, management) functionality. At present only the common level exists. As well as correctly generate the host files for next/dev/stage/prod.
-
 Eventually bone_marrow will run with a command line interface similar to the first iteration and later with a checklist UI populated with TD ansible roles.
+
+Third Iteration:
+- Commandline functionality has been merged with directory creation. Renamed bone_marrow to skeleton for consistency.
+- Current incarnation will with commandline create all necessary directorys and files and populate them with all common information.
+- Role population will be implemented pending 'ansible-selfserve' being successfully ported and tested.
+  - At present must be written manually.
 
 License
 -------
