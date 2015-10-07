@@ -1,0 +1,12 @@
+[all:vars]
+project = <%= $project_name %>
+environment_tier = <%= @environment %>
+
+[common:children]
+<%= @required_systems.join "\n" %>
+
+<% $required_systems.each do |required_system| %>
+[<%= required_system %>]
+<%= required_system %>.<%= $project_name %>-<%= @environment %>.teluswebteam.com
+
+<% end %>
