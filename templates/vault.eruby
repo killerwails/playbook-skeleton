@@ -5,7 +5,7 @@ database_password:
 riofs_access_key_id:
 riofs_secret_access_key:
 
-deployment_public_key:
+deployment_public_key: |
 
 deployment_private_key: |
 
